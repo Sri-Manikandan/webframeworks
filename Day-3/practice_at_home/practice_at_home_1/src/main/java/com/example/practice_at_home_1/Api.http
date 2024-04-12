@@ -1,0 +1,15 @@
+Post http://localhost:8080/
+Content-Type: application/json
+
+{
+     "id":123,
+     "studentName":"Nithish Kumar",
+     "departmentName":"It",
+     "mailid":"nmkmdfkmsk"
+}
+
+### Get all students
+get http://localhost:8080/
+
+### Get student by id
+get http://localhost:8080/123
