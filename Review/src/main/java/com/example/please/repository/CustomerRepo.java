@@ -12,4 +12,10 @@ import com.example.please.model.Customer;
 public interface CustomerRepo extends JpaRepository<Customer, Integer>{
     @Query("select c,p from Customer c join c.prods p")
     public List<Customer> display();
+
+    @Query("select c,p from Customer c left join c.prods p")
+    public List<Customer> displaya();
+
+    @Query("select c,p from Customer c right join c.prods p")
+    public List<Customer> displayb();
 }
