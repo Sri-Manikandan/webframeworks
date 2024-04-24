@@ -44,4 +44,10 @@ public class ProductService {
         repo.updateProduct(name, price, id);
         return "Data updated";
     }
+
+    //delete by id with jpql
+    public String deleteById(int id) {
+        repo.deleteProduct(id);
+        return "Data deleted";
+    }
 }

@@ -39,7 +39,6 @@ public class ProductController {
         return service.update(obj);
     }
 
-
     //Custom queries
     @GetMapping("/search/{name}")
     public ProductModel search(@PathVariable String name){
@@ -49,5 +48,10 @@ public class ProductController {
     @PutMapping("/update/{name}/{price}/{id}")
     public String update(@PathVariable String name, @PathVariable int price, @PathVariable int id){
         return service.update(name, price, id);
+    }
+
+    @DeleteMapping("/deleteById/{id}")
+    public String deleteById(@PathVariable int id){
+        return service.deleteById(id);
     }
 }
